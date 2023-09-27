@@ -2,6 +2,9 @@
 
 // - From React
 // - Our
+import Header from './Header';
+import Form from './Form'
+import Results from './Results';
 // - Sass
 import '../styles/App.scss';
 // - Images
@@ -18,9 +21,17 @@ function App() {
 
   /* HTML */
   return <div className="App">
-      <header>
-        <h1>Blodd Match</h1>
-      </header>
+      <Header/>
+      <main>
+        <Form/>
+        <Results/>
+      </main>
+      <footer>
+        <ul>
+        <li>© 2023</li>
+        <li>We❤️Donate</li>
+        </ul>
+      </footer>
   </div>;
 }
 
