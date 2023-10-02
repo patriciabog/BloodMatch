@@ -3,7 +3,7 @@ import React from 'react';
 function SelectDonate({ handleFilterDonate, donateFilter }) {
     const handleSelectDonate = (ev) => {
         handleFilterDonate(ev.target.value);
-        console.log(`has elegido ${ev.target.value}`)
+        console.log(`You have chosen: ${ev.target.value}`)
     }
     return (
         <div>

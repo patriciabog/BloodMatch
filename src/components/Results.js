@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-function Results({ typeBloodFiltred }) {
+function Results({ typeBloodFiltred, typeDonateFiltered }) {
   
     return (
        <article>
@@ -9,9 +9,8 @@ function Results({ typeBloodFiltred }) {
             {typeBloodFiltred.length > 0 ? (
                 typeBloodFiltred.map((typeInfo) => (
                     <div key={typeInfo.type}>
-                        <h3>Si tienes un tipo de sangre: {typeInfo.type}</h3>
-                        <p>Puedes donar sangre a: {typeInfo.donate.join(', ')}</p>
-                        <p>Puedes recibir sangre de: {typeInfo.receive.join(', ')}</p>
+                        <h3>If you have a blood type: {typeInfo.type}</h3>
+                        {typeDonateFiltered.length > 0 ? <p> You can donate blood to : {typeInfo.donate.join(', ')}</p> : <p> You can receive blood from : {typeInfo.receive.join(', ')}</p>}
                     </div>
                 ))
             ) : (

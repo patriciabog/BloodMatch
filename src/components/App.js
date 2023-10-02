@@ -84,11 +84,11 @@ const [showResults, setShowResults] = useState(false);
 
     // Realizar acciones adicionales según tus necesidades con el tipo seleccionado
     if (selectedType) {
-      console.log(`has elegido el tipo de sangre ${type}`);
+      console.log(`You have chosen the blood type: ${type}`);
       setShowResults(true);
       
     } else {
-      console.error(`Tipo de sangre no válido: ${type}`);
+      console.error(`Invalid blood type: ${type}`);
       setShowResults(false);
     
      
@@ -112,6 +112,9 @@ const [showResults, setShowResults] = useState(false);
   const typeBloodFiltred = bloodTypesInfo
     .filter((eachType) => eachType.type === typeFilter)
 
+    const typeDonateFiltered = bloodTypesInfo
+    .filter((eachDonate) => eachDonate.donate.includes(donateFilter))
+
   
   /* HTML */
   return <div className="App">
@@ -126,7 +129,7 @@ const [showResults, setShowResults] = useState(false);
         handleSelectType={handleSelectType}
         handleReset={handleReset}
         />
-      {showResults && <Results typeBloodFiltred={typeBloodFiltred} />}
+      {showResults && <Results typeBloodFiltred={typeBloodFiltred} typeDonateFiltered={typeDonateFiltered}/>}
       <button type="submit" onClick={handleSubmit}>
         Enter
       </button>
