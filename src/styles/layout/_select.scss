@@ -1,0 +1,38 @@
+.select {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+
+   &__parraf {
+    font-size: 0.8rem;
+    font-family: $font-text;
+   }
+   &__label {
+       padding: 1rem;
+       font-family: $font-text;
+       font-weight: bold;
+       color: #8b0000;
+   }
+   &__type {
+    font-family: $font-title;
+    text-align: center;
+    width: 15rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.3rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+    color: #8b0000;
+   
+   }
+   &__icon {
+        position: absolute;
+        top: -30px;
+        right: -96px;
+    
+      
+   }
+}
+

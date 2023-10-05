@@ -1,0 +1,73 @@
+.section2 {
+    margin: 1rem;
+    &__title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.results {
+    &__type {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-text;
+        margin: 0.8rem;
+        font-size: 1rem;
+        &__blood {
+            background-color: #ffb6c1;
+            font-size: 2rem;
+            font-family: $font-title;
+            text-align: center;
+            width: 4.6rem;
+            height: 4rem;
+            padding: 0.8rem 0.3rem;
+            margin-top: 1rem;
+        }
+
+    }
+    &__box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &__donate {
+            font-family: $font-text;
+             background-color: #90ee90;
+             width: 20rem;
+             height: 12rem;
+             padding: 1rem;
+             &__text {
+                font-size: 1rem;
+                display: flex;
+                flex-direction: column;
+                &__list {
+                    font-family: $font-title;
+                    color: #006400;
+                    padding: 0.5rem;
+                    font-size: 1.5rem;
+                }
+             }
+
+        }
+        &__receive {
+            font-family: $font-text;
+            background-color: #87ceeb;
+            width: 20rem;
+            height: 12rem;
+            padding: 1rem;
+            &__text {
+                font-size: 1rem;
+                display: flex;
+                flex-direction: column;
+                &__list {
+                font-family: $font-title;
+                color: #191970;
+                padding: 0.5rem;
+                font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

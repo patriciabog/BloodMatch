@@ -77,12 +77,10 @@ const [showResults, setShowResults] = useState(false);
   const handleSelectType = (ev) => {
     const type = ev.target.value;
     setTypeFilter(type);
-    setDonateFilter(type);
     handleFilterTypeBlood(type);
     
     const selectedType = bloodTypesInfo.find(bloodType => bloodType.type === type);
 
-    // Realizar acciones adicionales según tus necesidades con el tipo seleccionado
     if (selectedType) {
       console.log(`You have chosen the blood type: ${type}`);
       setShowResults(true);
@@ -90,10 +88,21 @@ const [showResults, setShowResults] = useState(false);
     } else {
       console.error(`Invalid blood type: ${type}`);
       setShowResults(false);
-    
-     
     }
-  
+  };
+
+  const handleSelectDonate = (ev) => {
+    const donate = ev.target.value;
+    setDonateFilter(donate);
+    handleFilterDonate(donate);
+
+    const selectedDonate = bloodTypesInfo.find(donateOption => donateOption.donate === donate);
+
+    if (selectedDonate) {
+      setShowResults(true);
+    } else {
+      setShowResults(false);
+    }
   };
 
   const handleSubmit = (event) => {
@@ -107,38 +116,34 @@ const [showResults, setShowResults] = useState(false);
     setShowResults(false);
   };
 
- 
   /* FUNCTIONS AND AUXILIARY VARIABLES TO PAINT THE HTML */
-  const typeBloodFiltred = bloodTypesInfo
+  const typeBloodFiltered = bloodTypesInfo
     .filter((eachType) => eachType.type === typeFilter)
-
-    const typeDonateFiltered = bloodTypesInfo
-    .filter((eachDonate) => eachDonate.donate.includes(donateFilter))
-
   
   /* HTML */
   return <div className="App">
       <Header/>
       <main>
+        <hr className='line-break'/>
         <Form
-        typeFilter={typeFilter}
-        handleFilterTypeBlood={handleFilterTypeBlood}
-        donateFilter={donateFilter}
-        handleFilterDonate={handleFilterDonate}
-        handleSubmit={handleSubmit}
-        handleSelectType={handleSelectType}
-        handleReset={handleReset}
+          typeFilter={typeFilter}
+          handleFilterTypeBlood={handleFilterTypeBlood}
+          donateFilter={donateFilter}
+          handleFilterDonate={handleFilterDonate}
+          handleSubmit={handleSubmit}
+          handleSelectType={handleSelectType}
+          handleReset={handleReset}
+          handleSelectDonate={handleSelectDonate}
         />
-      {showResults && <Results typeBloodFiltred={typeBloodFiltred} typeDonateFiltered={typeDonateFiltered}/>}
-      <button type="submit" onClick={handleSubmit}>
-        Enter
-      </button>
-      <button type="button" onClick={handleReset}>Reset</button>
+      <hr className='line-break' />
+
+      {showResults && <Results typeBloodFiltered={typeBloodFiltered}/>}
+  
       </main>
-      <footer>
-        <ul>
-        <li>© 2023</li>
-        <li>We❤️Donate</li>
+      <footer className='footer'>
+        <ul className='footer__list'>
+        <li className='footer__list__item'>© 2023</li>
+        <li className='footer__list__item'>We❤️Donate</li>
         </ul>
       </footer>
   </div>;

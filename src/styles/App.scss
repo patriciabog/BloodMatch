@@ -1,6 +1,53 @@
 /* Here are your styles */
+//Imports styles
+@import 'core/variables';
+@import 'layout/header';
+@import 'layout/form';
+@import 'layout/results';
+@import 'layout/select';
+
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select::-webkit-outer-spin-button,
+select::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.App {
+    display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+}
+
+.footer {
+   
+ 
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+        width: 100%;
+        padding: 1rem;
+        position: sticky;
+        z-index: 100;
+        bottom: 0;
+    
+    }
 }

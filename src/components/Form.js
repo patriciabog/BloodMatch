@@ -1,27 +1,22 @@
 import React from 'react';
 import SelectType from "./SelectType";
-import SelectDonate from "./SelectDonate";
 
-function Form({ handleFilterTypeBlood, typeFilter, handleFilterDonate, donateFilter, handleSumbit, handleReset }) {
+
+function Form({ handleFilterTypeBlood, typeFilter, handleSubmit, handleReset }) {
   
-
-    
     return (
-       <section>
-            <form action="" onSubmit={handleSumbit}>
+       <section className='section1'>
+            <form className='section1__form'>
                <SelectType
                     handleFilterTypeBlood={handleFilterTypeBlood}
                     typeFilter={typeFilter}
                     handleReset={handleReset}
-                   
-               />
-               <SelectDonate
-                    handleFilterDonate={handleFilterDonate}
-                    donateFilter={donateFilter}
-                    handleReset={handleReset}
                />
             </form>
-          
+            <div className='section1__button'>
+               <button className='section1__button__enter' type="submit" onClick={handleSubmit}>Enter</button>
+               <button className='section1__button__reset' type="button" onClick={handleReset}>Reset</button>
+            </div>
        </section>
     )
 }

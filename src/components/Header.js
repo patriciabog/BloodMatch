@@ -1,8 +1,8 @@
 
 function Header() {
     return (
-        <header>
-            <h1>Blodd Match</h1>
+        <header className="header">
+            <h1 className="header__title">Blood Match</h1>
         </header>
     )
 }
