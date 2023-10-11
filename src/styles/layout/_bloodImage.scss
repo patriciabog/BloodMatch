@@ -1,0 +1,22 @@
+.container {
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.blood {
+    width: 100%;
+    height: 0;
+    background-size: cover;
+    animation: fill 5s ease-in-out forwards;
+}
+
+@keyframes fill {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}

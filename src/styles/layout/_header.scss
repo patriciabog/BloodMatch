@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 3rem;
+    flex-direction: column;
+    margin: 2rem 3rem 0.5rem;
 
   
     &__title {

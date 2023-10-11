@@ -1,9 +1,8 @@
 import React from 'react';
 import SelectType from "./SelectType";
 
-
 function Form({ handleFilterTypeBlood, typeFilter, handleSubmit, handleReset }) {
-  
+   
     return (
        <section className='section1'>
             <form className='section1__form'>

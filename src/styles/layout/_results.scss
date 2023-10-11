@@ -32,9 +32,11 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        gap: 0.5rem;
         &__donate {
             font-family: $font-text;
              background-color: #90ee90;
+            border-radius: 20px;
              width: 20rem;
              height: 12rem;
              padding: 1rem;
@@ -55,6 +57,7 @@
             font-family: $font-text;
             background-color: #87ceeb;
             width: 20rem;
+            border-radius: 20px;
             height: 12rem;
             padding: 1rem;
             &__text {

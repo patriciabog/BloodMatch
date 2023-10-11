@@ -3,7 +3,6 @@ import React from 'react';
 
 function Results({ typeBloodFiltered}) {
  
-  
     return (
        <article className='section2'>
             <h2 className='section2__title'>Results</h2>

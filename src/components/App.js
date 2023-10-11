@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Header from './Header';
 import Form from './Form'
 import Results from './Results';
+import bloodTypesInfo from './data/bloodTypesInfo';
+//import BloodImage from './BloodImage';
 // - Sass
 import '../styles/App.scss';
 // - Images
@@ -16,52 +18,7 @@ const [typeFilter, setTypeFilter] = useState('');
 const [donateFilter, setDonateFilter] = useState('');
 const [showResults, setShowResults] = useState(false);
 
-
   /* EFFECTS (code when the page loads) */
-
-
-  const bloodTypesInfo = [
-    {
-      type: "A+",
-      donate: ["A+", "AB+"],
-      receive: ["A+", "A-", "O+", "O-"],
-    },
-    {
-      type: "A-",
-      donate: ["A+", "A-", "AB+", "AB-"],
-      receive: ["A-", "O-"],
-    },
-    {
-      type: "B+",
-      donate: ["B+", "AB+"],
-      receive: ["B+", "B-", "O+", "O-"],
-    },
-    {
-      type: "B-",
-      donate: ["B+", "B-", "AB+", "AB-"],
-      receive: ["B-", "O-"],
-    },
-    {
-      type: "AB+",
-      donate: ["AB+"],
-      receive: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
-    },
-    {
-      type: "AB-",
-      donate: ["AB+", "AB-"],
-      receive: ["A-", "B-", "AB-", "O-"],
-    },
-    {
-      type: "O+",
-      donate: ["A+", "B+", "AB+", "O+"],
-      receive: ["O+", "O-"],
-    },
-    {
-      type: "O-",
-      donate: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
-      receive: ["O-"],
-    },
-  ];
 
 
   /* HANDLER FUNCTIONS */
@@ -125,6 +82,7 @@ const [showResults, setShowResults] = useState(false);
       <Header/>
       <main>
         <hr className='line-break'/>
+        
         <Form
           typeFilter={typeFilter}
           handleFilterTypeBlood={handleFilterTypeBlood}
@@ -138,7 +96,7 @@ const [showResults, setShowResults] = useState(false);
       <hr className='line-break' />
 
       {showResults && <Results typeBloodFiltered={typeBloodFiltered}/>}
-  
+   
       </main>
       <footer className='footer'>
         <ul className='footer__list'>
@@ -148,8 +106,6 @@ const [showResults, setShowResults] = useState(false);
       </footer>
   </div>;
 }
-
-/* PROP-TYPES */
 
 /* EXPORT */
 export default App;
