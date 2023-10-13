@@ -20,7 +20,7 @@
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+     appearance: none;
 }
 select::-webkit-outer-spin-button,
 select::-webkit-inner-spin-button {
@@ -36,6 +36,7 @@ select::-webkit-inner-spin-button {
         position: relative;
 
 }
+
 
 .footer {
     position: absolute;

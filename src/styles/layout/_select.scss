@@ -10,6 +10,7 @@ position: relative;
     font-family: $font-text;
    }
    &__label {
+    font-size: 1rem;
        padding: 1rem;
        font-family: $font-text;
        font-weight: bold;
@@ -36,3 +37,19 @@ position: relative;
    }
 }
 
+ @media all and (min-width: 768px) {
+.select {
+    &__parraf {
+            font-size: 1rem;
+        }
+    &__label {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    &__type {
+    font-size: 1.3rem;
+    width: 16rem;
+    }
+}
+
+ }

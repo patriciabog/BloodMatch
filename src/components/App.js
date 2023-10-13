@@ -18,8 +18,6 @@ const [typeFilter, setTypeFilter] = useState('');
 const [donateFilter, setDonateFilter] = useState('');
 const [showResults, setShowResults] = useState(false);
 
-  /* EFFECTS (code when the page loads) */
-
 
   /* HANDLER FUNCTIONS */
 
@@ -80,7 +78,7 @@ const [showResults, setShowResults] = useState(false);
   /* HTML */
   return <div className="App">
       <Header/>
-      <main>
+      <main className='main'>
         <hr className='line-break'/>
         
         <Form
