@@ -9,14 +9,12 @@ const MyChatbotWidget = () => {
     const [isChatbotVisible, setIsChatbotVisible] = useState(false);
 
     const checkKeyword = (message, keyword) => message.includes('donate') && message.includes(keyword);
-
     /**
  * Handles the user message and generates a response based on detected keywords.
  *
  * @param {string} userMessage - The user's message to process.
  * @returns {void}
  */
-
     const handleUserMessage = (userMessage) => {
         /**
     * Converts the user message to lowercase for case-insensitive comparison.
@@ -25,7 +23,10 @@ const MyChatbotWidget = () => {
         const lowerCaseMessage = userMessage.toLowerCase();
         let response;
 
-        if (checkKeyword(lowerCaseMessage, 'frequency')) {
+        // Special case for greeting
+        if (lowerCaseMessage.includes('hi')) {
+            response = "Hello! I am Patty. How can I help you today?";
+        } else if (checkKeyword(lowerCaseMessage, 'frequency')) {
             response = responses.frequency;
         } else if (checkKeyword(lowerCaseMessage, 'tattoo')) {
             response = responses.tattoo;
