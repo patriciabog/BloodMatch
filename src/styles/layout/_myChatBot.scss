@@ -1,0 +1,68 @@
+.message-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 15rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: #ffffff;
+}
+.user-message{
+    font-size: 0.7rem;
+}
+.chatbot-message{
+    font-size: 0.7rem;
+    color: #006400;
+}
+.user-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    &__questionText {
+        font-family: $font-text;
+        width: 75%;
+        padding: 10px;
+        font-size: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+        overflow: auto;
+    }
+}
+
+
+button {
+    width: 20%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+.close-button:hover {
+    color: #000;
+}
+.closeBtn {
+    color: #0000ff;
+
+}

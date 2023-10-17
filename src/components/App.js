@@ -1,26 +1,25 @@
 /* IMPORT SECTION */
-// - From React
 import { useState } from 'react';
-// - Our
 import Header from './Header';
 import Form from './Form'
 import Results from './Results';
 import bloodTypesInfo from './data/bloodTypesInfo';
-//import BloodImage from './BloodImage';
-// - Sass
+import ChatContainer from './ChatContainer';
 import '../styles/App.scss';
-// - Images
 
-/* COMPONENT SECTION */
 function App() {
   /* STATE VARIABLES (DATA) */
 const [typeFilter, setTypeFilter] = useState('');
 const [donateFilter, setDonateFilter] = useState('');
 const [showResults, setShowResults] = useState(false);
 
-
   /* HANDLER FUNCTIONS */
-
+  /**
+ * Handles the selection of a blood type and the selection of a donation option for filtering.
+ *
+ * @param {string} value - The selected blood type.
+ * @returns {void}
+ */
   const handleFilterTypeBlood = (value) => {
     setTypeFilter(value);
  };
@@ -33,7 +32,7 @@ const [showResults, setShowResults] = useState(false);
     const type = ev.target.value;
     setTypeFilter(type);
     handleFilterTypeBlood(type);
-    
+
     const selectedType = bloodTypesInfo.find(bloodType => bloodType.type === type);
 
     if (selectedType) {
@@ -46,6 +45,12 @@ const [showResults, setShowResults] = useState(false);
     }
   };
 
+  /**
+ * Handles the selection of a donation option from the user interface.
+ *
+ * @param {Event} ev - The event object representing the user's selection.
+ * @returns {void}
+ */
   const handleSelectDonate = (ev) => {
     const donate = ev.target.value;
     setDonateFilter(donate);
@@ -72,6 +77,10 @@ const [showResults, setShowResults] = useState(false);
   };
 
   /* FUNCTIONS AND AUXILIARY VARIABLES TO PAINT THE HTML */
+  /**
+ * Filters blood types based on the selected type.
+ * @type {Array<object>}
+ */
   const typeBloodFiltered = bloodTypesInfo
     .filter((eachType) => eachType.type === typeFilter)
   
@@ -94,7 +103,9 @@ const [showResults, setShowResults] = useState(false);
       <hr className='line-break' />
 
       {showResults && <Results typeBloodFiltered={typeBloodFiltered}/>}
-   
+      <div>
+        <ChatContainer />
+      </div>
       </main>
       <footer className='footer'>
         <ul className='footer__list'>

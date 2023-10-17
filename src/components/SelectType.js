@@ -1,5 +1,14 @@
 import React from 'react';
 
+/**
+ * SelectType component for handling the selection of a blood type.
+ *
+ * @component
+ * @param {object} props - Component properties.
+ * @param {Function} props.handleFilterTypeBlood - Callback function to handle the selected blood type.
+ * @param {string} props.typeFilter - The currently selected blood type.
+ * @returns {JSX.Element} - The SelectType component.
+ */
 function SelectType({ handleFilterTypeBlood, typeFilter }) {
     const handleSelectType = (ev) => {
         handleFilterTypeBlood(ev.target.value);

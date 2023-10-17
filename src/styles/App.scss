@@ -6,6 +6,7 @@
 @import 'layout/results';
 @import 'layout/select';
 @import 'layout/bloodImage';
+@import 'layout/myChatBot';
 
 
 * {
@@ -45,7 +46,6 @@ select::-webkit-inner-spin-button {
     height: 1rem;
  
     &__list {
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,3 +53,27 @@ select::-webkit-inner-spin-button {
         padding: 1rem;    
     }
 }
+
+/* Styles Chatbot */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1000;
+    font-family: $font-text;
+    font-size: 0.7rem;
+    margin: 0 0.5rem 1.3rem 0.5rem;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+.img-bot {
+    width: 2.5rem;
+    cursor: pointer;
+    margin: 0 0.1rem;
+}
+
