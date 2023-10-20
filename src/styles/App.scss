@@ -47,10 +47,9 @@ select::-webkit-inner-spin-button {
  
     &__list {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 10rem;
-        padding: 1rem;    
+        padding: 1rem 8rem;    
     }
 }
 
@@ -69,11 +68,17 @@ select::-webkit-inner-spin-button {
     margin: 0 0.5rem 1.3rem 0.5rem;
     background-color: #f0f8ff;
     border-radius: 8px;
-    padding: 0.5rem;
+    padding: 0.5rem 0 0.2rem;
+    width: 16rem;
 }
 .img-bot {
     width: 2.5rem;
     cursor: pointer;
-    margin: 0 0.1rem;
 }
 
+@media all and (min-width: 768px) {
+.chat-container {
+    width: 20rem;
+    font-size: 0.9rem;
+}
+}

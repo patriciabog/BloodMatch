@@ -4,17 +4,21 @@
     justify-content: center;
     align-items: flex-start;
     gap: 0.5rem;
-    width: 15rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    background-color: #ffffff;
+    padding: 0.5rem;   
 }
 .user-message{
     font-size: 0.7rem;
+    background-color: #ffffff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
 }
 .chatbot-message{
     font-size: 0.7rem;
-    color: #006400;
+    color: white;
+    background-color: #4169e1;
+    margin-left: 3rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
 }
 .user-input {
     display: flex;
@@ -22,18 +26,46 @@
     align-items: center;
     margin-top: 0.5rem;
     padding: 0.5rem;
+    width: 14rem;
+    gap: 10px;
     &__questionText {
         font-family: $font-text;
         width: 75%;
         padding: 10px;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         border: 1px solid #ccc;
         border-radius: 5px;
         resize: vertical;
-        overflow: auto;
+        overflow-y: auto;
+    }
+}
+@media all and (min-width: 768px) {
+    .user-message {
+        font-size: 1rem;
+    }
+    .chatbot-message{
+        font-size: 1rem;
+     }
+    .user-input {
+        width: 15rem;
+        &__questionText {
+            width: 78%;
+            padding: 10px 20px;
+            font-size: 0.8rem;
+        }
     }
 }
 
+ @media all and (min-width: 1200px) {
+    .user-input {
+        width: 18rem;
+            &__questionText {
+                width: 80%;
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+        }
+ }
 
 button {
     width: 20%;

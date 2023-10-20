@@ -36,7 +36,9 @@ const MyChatbotWidget = () => {
             response = responses.time;
         } else if (checkKeyword(lowerCaseMessage, 'effects')) {
             response = responses.effects;
-        } else {
+        } else if (lowerCaseMessage.includes('thanks')){
+            response = "You'are welkome!";
+        }else {
             response = responses.default;
         }
 
