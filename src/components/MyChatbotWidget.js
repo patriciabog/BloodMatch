@@ -5,8 +5,7 @@ import responses from './data/responsesData';
 
 const MyChatbotWidget = () => {
     const [messages, setMessages] = useState([]);
-    // eslint-disable-next-line no-unused-vars
-    const [isChatbotVisible, setIsChatbotVisible] = useState(false);
+    const [isChatbotVisible] = useState(false);
 
     const checkKeyword = (message, keyword) => message.includes('donate') && message.includes(keyword);
     /**
@@ -23,7 +22,6 @@ const MyChatbotWidget = () => {
         const lowerCaseMessage = userMessage.toLowerCase();
         let response;
 
-        // Special case for greeting
         if (lowerCaseMessage.includes('hi')) {
             response = "Hello! I am Patty. How can I help you today?";
         } else if (checkKeyword(lowerCaseMessage, 'frequency')) {
@@ -36,9 +34,9 @@ const MyChatbotWidget = () => {
             response = responses.time;
         } else if (checkKeyword(lowerCaseMessage, 'effects')) {
             response = responses.effects;
-        } else if (lowerCaseMessage.includes('thanks')){
+        } else if (lowerCaseMessage.includes('thanks')) {
             response = "You'are welkome!";
-        }else {
+        } else {
             response = responses.default;
         }
 

@@ -9,10 +9,6 @@ import bot from '../images/bot.png'
  * @returns {JSX.Element} - The ChatContainer component.
  */
 const ChatContainer = () => {
-    /**
-     * State representing the visibility of the chatbot.
-     * @type {[boolean, Function]}
-     */
     const [isChatbotVisible, setIsChatbotVisible] = useState(false);
 
     const toggleChatbotVisibility = () => {
@@ -24,13 +20,13 @@ const ChatContainer = () => {
 
     return (
         <div className="chat-container">
-            {isChatbotVisible && (
-                <div className="close-button" onClick={closeChatbot}>
-                    <i className="fa-solid fa-xmark closeBtn"></i>
-                </div>
+           {isChatbotVisible && (
+            <div className="chat-container__closeButton" onClick={closeChatbot}>
+                <i className="fa-solid fa-xmark chat-container__closeButton__closeBtn"></i>
+            </div>
             )}
-            <p>How can I assist you?</p>
-            <img className='img-bot' src={bot} alt="" onClick={toggleChatbotVisibility} />
+            <p className='chat-container__title'>How can I assist you?</p>
+            <img className='chat-container__img-bot' src={bot} alt="bot" onClick={toggleChatbotVisibility} />
             {isChatbotVisible && <MyChatbotWidget isVisible={isChatbotVisible} onClose={toggleChatbotVisibility} />}
         </div>
     );

@@ -1,10 +1,10 @@
 import BloodImage from './BloodImage';
 
-function Header({full}) {
+function Header() {
     return (
         <header className="header">
             <h1 className="header__title">Blood Match</h1>
-            <BloodImage lleno={full} />
+            <BloodImage  />
         </header>
     )
 }

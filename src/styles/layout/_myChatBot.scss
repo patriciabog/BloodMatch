@@ -4,72 +4,47 @@
     justify-content: center;
     align-items: flex-start;
     gap: 0.5rem;
-    padding: 0.5rem;   
+    padding: 0.5rem;
 }
-.user-message{
+
+.user-message {
     font-size: 0.7rem;
-    background-color: #ffffff;
+    background-color: $color-backUser-message;
     padding: 0.2rem 0.5rem;
     border-radius: 5px;
 }
-.chatbot-message{
+
+.chatbot-message {
     font-size: 0.7rem;
-    color: white;
-    background-color: #4169e1;
+    color: $color-chat-message;
+    background-color: $color-backChat-message;
     margin-left: 3rem;
     padding: 0.2rem 0.5rem;
     border-radius: 5px;
 }
+
 .user-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    width: 14rem;
+    margin: 0.5rem;
+    padding: 0.2rem 0.5rem;
     gap: 10px;
+
     &__questionText {
         font-family: $font-text;
-        width: 75%;
-        padding: 10px;
+        width: 85%;
+        padding: 0.6rem;
         font-size: 0.8rem;
         border: 1px solid #ccc;
         border-radius: 5px;
-        resize: vertical;
         overflow-y: auto;
     }
 }
-@media all and (min-width: 768px) {
-    .user-message {
-        font-size: 1rem;
-    }
-    .chatbot-message{
-        font-size: 1rem;
-     }
-    .user-input {
-        width: 15rem;
-        &__questionText {
-            width: 78%;
-            padding: 10px 20px;
-            font-size: 0.8rem;
-        }
-    }
-}
-
- @media all and (min-width: 1200px) {
-    .user-input {
-        width: 18rem;
-            &__questionText {
-                width: 80%;
-                padding: 10px 20px;
-                font-size: 0.8rem;
-            }
-        }
- }
 
 button {
     width: 20%;
-    padding: 0.4rem;
+    padding: 0.5rem;
     font-size: 1.2rem;
     background-color: #4CAF50;
     color: #fff;
@@ -82,19 +57,20 @@ button:hover {
     background-color: #45a049;
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 18px;
+@media all and (min-width: 768px) {
+    .user-message {
+        font-size: 1rem;
+    }
 
-}
+    .chatbot-message {
+        font-size: 1rem;
+    }
 
-.close-button:hover {
-    color: #000;
-}
-.closeBtn {
-    color: #0000ff;
-
+    .user-input {
+        &__questionText {
+            width: 80%;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+    }
 }

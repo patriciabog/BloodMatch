@@ -1,5 +1,5 @@
 import React from 'react';
-import imgBlood from '../images/blood.png'; // Reemplaza con la ruta correcta de tu imagen
+import imgBlood from '../images/blood.png';
 
 const BloodImage = () => {
     return (

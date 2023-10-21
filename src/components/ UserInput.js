@@ -9,14 +9,8 @@ import React, { useState } from 'react';
  * @returns {JSX.Element} - The UserInput component.
  */
 const UserInput = ({ onUserMessage }) => {
-    const [inputText, setInputText] = useState('');
+   const [inputText, setInputText] = useState('');
 
-    /**
-     * Handles changes to the input and submission text.
-     *
-     * @param {Event} e - The input change event.
-     * @returns {void}
-     */
     const handleInputChange = (e) => {
         setInputText(e.target.value);
     };

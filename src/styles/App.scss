@@ -3,6 +3,7 @@
 @import 'core/variables';
 @import 'layout/header';
 @import 'layout/form';
+@import 'layout/footer';
 @import 'layout/results';
 @import 'layout/select';
 @import 'layout/bloodImage';
@@ -17,42 +18,18 @@
     list-style: none;
 }
 
-
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
      appearance: none;
 }
-select::-webkit-outer-spin-button,
-select::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 
 .App {
     display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        position: relative;
-
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
 }
-
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1rem;
- 
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 8rem;    
-    }
-}
-
 /* Styles Chatbot */
 .chat-container {
     display: flex;
@@ -60,20 +37,33 @@ select::-webkit-inner-spin-button {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 10px;
     z-index: 1000;
     font-family: $font-text;
     font-size: 0.7rem;
-    margin: 0 0.5rem 1.3rem 0.5rem;
-    background-color: #f0f8ff;
+    margin: 0.1rem 0.5rem 0.5rem 0.5rem;
+    background-color: $color-chatbot;
     border-radius: 8px;
-    padding: 0.5rem 0 0.2rem;
-    width: 16rem;
-}
-.img-bot {
-    width: 2.5rem;
-    cursor: pointer;
+    padding: 1.2rem 0.1em 0.2rem 0.1em;
+    width: 15rem;
+    &__closeButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 1rem;
+        &__closeBtn {
+            color: #0000ff;
+        }
+    }
+    &__title {
+        font-size: 0.7rem;
+    }
+    &__img-bot {
+        width: 2.5rem;
+        cursor: pointer;
+    }
 }
 
 @media all and (min-width: 768px) {

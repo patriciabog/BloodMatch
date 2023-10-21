@@ -4,17 +4,16 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 position: relative;
-
    &__parraf {
     font-size: 0.8rem;
     font-family: $font-text;
    }
    &__label {
     font-size: 1rem;
-       padding: 1rem;
-       font-family: $font-text;
-       font-weight: bold;
-       color: #8b0000;
+    padding: 1rem;
+    font-family: $font-text;
+    font-weight: bold;
+    color: $color-select;
    }
    &__type {
     font-family: $font-title;
@@ -24,31 +23,29 @@ position: relative;
     font-size: 1.3rem;
     border: 1px solid #ccc;
     border-radius: 30px;
-    background-color: #f5f5f5;
-    color: #8b0000;
-   
+    background-color: $color-back-select;
+    color: $color-select;
    }
    &__icon {
         position: absolute;
         top: -32px;
         right: -100px;
         color: #778899 ;
-      
    }
 }
 
  @media all and (min-width: 768px) {
 .select {
     &__parraf {
-            font-size: 1rem;
+        font-size: 1rem;
         }
     &__label {
         padding: 1rem;
         font-size: 1.2rem;
     }
     &__type {
-    font-size: 1.3rem;
-    width: 16rem;
+        font-size: 1.3rem;
+        width: 16rem;
     }
 }
 

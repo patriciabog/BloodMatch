@@ -12,7 +12,6 @@ import React from 'react';
 function SelectType({ handleFilterTypeBlood, typeFilter }) {
     const handleSelectType = (ev) => {
         handleFilterTypeBlood(ev.target.value);
-        console.log(`You have chosen the blood type: ${ev.target.value}`)
     }
     return (
         <div className='select'>
