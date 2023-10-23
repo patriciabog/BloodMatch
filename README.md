@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blood Match App 🩸
 
-## Available Scripts
+Blood Match is a web application built with JavaScript, React, Sass and npm that facilitates the process of finding and connecting blood donors with recipients. The app allows users to filter and search for specific blood types, view matching donors, and engage in a chat for further coordination.
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1.- Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone https://github.com/your-username/blood-match.git
 
-### `npm test`
+```
+2.- Install dependencies:
+    
+```bash
+cd blood-match
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+3.- Run the app:
+    
+```bash
+npm start
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4.- Open your browser and navigate to http://localhost:3000.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Blood Match app is designed to help users find donors based on specific blood types. Follow these steps to use the app:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.- Select Blood Type:
 
-### `npm run eject`
+2.- Use the dropdown menu to select the desired blood type.
+Filter Options:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3.- Choose the desired filter options for blood donation.
+Submit:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4.- Click the "Submit" button to view matching donors.
+Results:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5.- Matching donors will be displayed, and you can further engage with them through the chat feature.
+Chat:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+6.- Utilize the chat feature to coordinate with potential donors.
+Reset:
 
-## Learn More
+7.- Click the "Reset" button to clear filters and results.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features
 
-### Code Splitting
+- Filtering: Easily filter blood donors based on blood type and donation options.
+- Results Display: View a list of matching donors based on selected criteria.
+- Chat Functionality: Communicate with potential donors through an integrated chat feature.
+- User-Friendly Interface: Simple and intuitive design for an optimal user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+We welcome contributions! If you have any suggestions, bug reports, or feature requests, feel free to open an issue or submit a pull request.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
