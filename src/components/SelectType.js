@@ -20,7 +20,7 @@ function SelectType({ handleFilterTypeBlood, typeFilter }) {
             <select 
             className='select__type'
             type="select" 
-            name="type" 
+            name="type"
             id={typeFilter} 
             onChange={handleSelectType}
             value={typeFilter}
