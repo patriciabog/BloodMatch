@@ -14,9 +14,13 @@ function Form({ handleFilterTypeBlood, typeFilter, handleSubmit, handleReset }) 
          </form>
          <div className='section1__button'>
             <button 
-            className='section1__button__btn' 
-            type="submit" onClick={handleSubmit}>Enter</button>
-            <button className='section1__button__btn' type="button" onClick={handleReset}>Reset</button>
+                className='section1__button__btn' 
+                type="button" 
+                onClick={handleReset}>Reset</button>
+            <button
+               className='section1__button__btn'
+               type="submit" 
+               onClick={handleSubmit}>Enter</button>
          </div>
       </section>
    )
